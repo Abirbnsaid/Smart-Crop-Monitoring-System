@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     # mon APP ICI
     'monitoring.apps.MonitoringConfig',
 
-    # Packages API (si nécessaire plus tard)
-    'rest_framework',
+      'rest_framework',
     'rest_framework_simplejwt',
+    'monitoring.apps.MonitoringConfig',
 ]
 
 
@@ -127,3 +127,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Dans core/settings.py - À AJOUTER
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
